@@ -1,15 +1,16 @@
-<div>
-  <h1>Main component, what will live inside here?</h1>
-  <p>My name is {{ name }}, and I am trying to study angular</p>
+<div class="container">
+  <div>
+    <p>My name is {{ name }}, and I am trying to study angular</p>
 
-  <p>Right now, my number is {{ myNumber }}</p>
-</div>
-
-<div class="square-contain">
-  <div class="square green" (click)="addClick()">
-    <h2>click to add</h2>
+    <p>Right now, my number is {{ myNumber }}</p>
   </div>
-  <div class="square black" (click)="subtractClick()">
-    <h2>click to subtract</h2>
+
+  <div class="square-contain">
+    <div class="square green" (click)="addClick()">
+      <h2>click to add</h2>
+    </div>
+    <div class="square black" (click)="subtractClick()">
+      <h2>click to subtract</h2>
+    </div>
   </div>
 </div>

@@ -4,17 +4,20 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
-
+import { SiblingComponent } from './sibling/sibling.component';
+import { ShareNumberService } from './share-number.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    SiblingComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ShareNumberService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

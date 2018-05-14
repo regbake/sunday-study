@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
+import { ShareNumberService } from '../share-number.service';
 
 @Component({
   selector: 'app-main',
@@ -7,8 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class MainComponent implements OnInit {
-
-  constructor() { }
+  constructor(private ShareNumberService: ShareNumberService) { }
 
   ngOnInit() {
   }
@@ -19,10 +20,13 @@ export class MainComponent implements OnInit {
 
   addClick(){
     this.myNumber++;
+    this.ShareNumberService.setNumber(this.myNumber);
   }
 
   subtractClick(){
     this.myNumber--;
+    this.ShareNumberService.setNumber(this.myNumber);
+
   }
 
 }
